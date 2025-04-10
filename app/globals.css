@@ -15,8 +15,16 @@
   --font-sans: var(--font-outfit);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--peach-puff);
   color: var(--fiery-red);
   font-family: "Outfit", Helvetica, sans-serif;
+}
+
+.outlined-text {
+  @apply -tracking-tighter text-peach-puff text-shadow-[-1px_-1px_0_var(--fiery-red),_1px_-1px_0_var(--fiery-red),_-1px_1px_0_var(--fiery-red),_1px_1px_0_var(--fiery-red)];
 }

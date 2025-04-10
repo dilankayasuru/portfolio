@@ -1,7 +1,7 @@
 "use client"
-import Link from "next/link"
-import { BackArrow } from "./BackArrow"
-import { useState } from "react"
+import Link from "next/link";
+import { BackArrow } from "./Icons";
+import { useState } from "react";
 
 export const SideNavigation = () => {
     const [open, setOpen] = useState(false);
