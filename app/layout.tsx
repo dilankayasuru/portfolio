@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
+import { SideNavigation } from "./components/SideNavigation";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body
         className={`${outfit.variable} antialiased`}
       >
+        <SideNavigation />
         {children}
       </body>
     </html>
