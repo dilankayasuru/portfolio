@@ -48,7 +48,8 @@ export const ActionFigure = () => {
             style={{
                 transformStyle: "preserve-3d",
                 transform,
-            }}>
+            }} 
+            className="mb-24 md:mb-0">
             <Image
                 src="/images/action-figure.webp" width={800} height={800} alt="image of an action figure" className="w-96 rounded-4xl shadow-2xl tralate-z-72"
                 style={{
