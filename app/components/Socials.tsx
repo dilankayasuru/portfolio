@@ -12,11 +12,11 @@ export const Socials = () => {
                 {
                     SOCIALS.map((social, idx) =>
                         <Link href={social.link} target="_blank" key={idx} className="bg-peach-puff rounded-lg p-2">
-                            <Image src={social.image} width={32} height={32} alt={social.name} className="hover:scale-115 transition-transform duration-500 ease-in-out" />
+                            <Image src={social.image} width={32} height={32} alt={social.name} className="hover:scale-115 transition-transform duration-300 ease-in-out" />
                         </Link>
                     )
                 }
-                <Link href={CV_LINK} className="text-lg bg-peach-puff text-fiery-red px-4 py-2 rounded-full" download>Download CV</Link>
+                <Link href={CV_LINK} className="text-lg bg-peach-puff text-fiery-red px-4 py-2 rounded-full active:translate-y-0.5 active:shadow-md duration-300 shadow-xl" download>Download CV</Link>
             </div>
         </div>
     )
