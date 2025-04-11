@@ -1,4 +1,5 @@
 import { ActionFigure } from "../components/ActionFigure";
+import { FloatingIcons } from "../components/FloatingIcons";
 import { TimeZone } from "../components/TimeZone";
 
 export const Hero = () => {
@@ -11,6 +12,7 @@ export const Hero = () => {
                 </div>
                 <ActionFigure />
                 <TimeZone />
+                <FloatingIcons />
             </div>
         </>
 
