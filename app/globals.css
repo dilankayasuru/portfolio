@@ -41,3 +41,22 @@ body {
 .project-image {
   @apply duration-1000 ease-in-out;
 }
+
+.menu-link {
+  position: relative;
+}
+
+.menu-link:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: var(--peach-puff);
+  @apply duration-500 ease-in-out;
+}
+
+.menu-link:hover:after {
+  width: 100%;
+}

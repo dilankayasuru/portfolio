@@ -54,7 +54,7 @@ export const Contact = () => {
     }
 
     return (
-        <div className="px-6 py-16">
+        <div className="px-6 py-16" id="contact">
             <p className="text-7xl font-extrabold outlined-text mb-16 md:text-9xl uppercase">Say Hi,</p>
             <form onSubmit={handleSubmit} className="w-full max-w-3xl mx-auto text-lg">
                 <InputField label="Name" id="Name" placeholder="Enter your name" type="text" required />

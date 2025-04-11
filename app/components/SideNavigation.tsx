@@ -7,18 +7,17 @@ export const SideNavigation = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <div className="fixed top-0 left-0 flex justify-center items-center h-screen z-50">
-            {/* <div className="w-4 bg-fiery-red h-screen"></div> */}
-            <nav className={`rounded-r-3xl shadow-xl overflow-hidden ${open ? 'translate-x-0' : '-translate-x-9/12 opacity-75'} transition-all duration-300 ease-in-out`}>
-                <div className="text-xl text-peach-puff bg-fiery-red flex">
-                    <ul className="grid gap-4 p-4">
-                        <li><Link href="#">My Work</Link></li>
-                        <li><Link href="#">About me</Link></li>
-                        <li><Link href="#">Contact me</Link></li>
-                    </ul>
+        <div className="fixed top-0 right-0 h-screen z-50">
+            <nav className={`rounded-bl-3xl shadow-xl overflow-hidden ${open ? 'translate-x-0' : 'translate-x-9/12 opacity-75'} transition-all duration-300 ease-in-out`}>
+                <div className="text-xl text-peach-puff bg-fiery-red flex pr-2">
                     <button className="px-2 grid place-content-center cursor-pointer outline-none" onClick={() => setOpen(!open)}>
-                        <BackArrow className={`transition-all duration-300 ease-in-out ${open ? "-scale-100 -translate-x-2" : "scale-100"}`} />
+                        <BackArrow className={`transition-all duration-300 ease-in-out ${open ? "scale-100 translate-x-2" : "-scale-100"}`} />
                     </button>
+                    <ul className="grid gap-4 p-4">
+                        <li className="menu-link"><Link href="#work">My Work</Link></li>
+                        <li className="menu-link"><Link href="#about">About me</Link></li>
+                        <li className="menu-link"><Link href="#contact">Contact me</Link></li>
+                    </ul>
                 </div>
             </nav>
         </div>
