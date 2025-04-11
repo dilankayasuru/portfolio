@@ -133,3 +133,67 @@ export const GalleryImages = [
         image: "/images/diving.webp",
     },
 ];
+
+export const Projects = [
+    {
+        title: "Project 1",
+        image: "/images/mockup-1.png",
+        link: "#",
+        tags: [
+            "Python",
+            "Node",
+            "React",
+            "Ollama"
+        ]
+    },
+    {
+        title: "Project 1",
+        image: "/images/mockup-2.png",
+        link: "#",
+        tags: [
+            "Python",
+            "Node",
+            "React",
+        ]
+    },
+    {
+        title: "Project 1",
+        image: "/images/mockup-3.png",
+        link: "#",
+        tags: [
+            "Python",
+            "Node",
+            "React",
+        ]
+    },
+    {
+        title: "Project 1",
+        image: "/images/mockup-4.png",
+        link: "#",
+        tags: [
+            "Python",
+            "Node",
+            "React",
+        ]
+    },
+    {
+        title: "Project 1",
+        image: "/images/mockup-1.png",
+        link: "#",
+        tags: [
+            "Python",
+            "Node",
+            "React",
+        ]
+    },
+    {
+        title: "Project 1",
+        image: "/images/mockup-2.png",
+        link: "#",
+        tags: [
+            "Python",
+            "Node",
+            "React",
+        ]
+    },
+];

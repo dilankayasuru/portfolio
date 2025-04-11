@@ -23,12 +23,21 @@ body {
   background: var(--peach-puff);
   color: var(--fiery-red);
   font-family: "Outfit", Helvetica, sans-serif;
+  letter-spacing: 0.025em;
 }
 
 .outlined-text {
-  @apply -tracking-tighter text-peach-puff text-shadow-[-1px_-1px_0_var(--fiery-red),_1px_-1px_0_var(--fiery-red),_-1px_1px_0_var(--fiery-red),_1px_1px_0_var(--fiery-red)];
+  @apply tracking-wider text-peach-puff text-shadow-[-1px_-1px_0_var(--fiery-red),_1px_-1px_0_var(--fiery-red),_-1px_1px_0_var(--fiery-red),_1px_1px_0_var(--fiery-red)];
 }
 
 .swiper-pagination-bullet {
   background: var(--peach-puff) !important;
+}
+
+.project-card:hover .project-image {
+  @apply scale-110;
+}
+
+.project-image {
+  @apply duration-1000 ease-in-out;
 }
