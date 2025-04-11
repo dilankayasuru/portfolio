@@ -1,9 +1,17 @@
+"use client"
 import { TechStackList } from "@/data/data";
 import Image from "next/image";
+import { motion } from "motion/react";
+import { componentVarient } from "./Animations";
 
 export const TechStack = () => {
     return (
-        <div className="rounded-2xl overflow-hidden bg-fiery-red shadow-2xl p-6 mb-6">
+        <motion.div className="rounded-2xl overflow-hidden bg-fiery-red shadow-2xl p-6 mb-6"
+            variants={componentVarient}
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true }}
+        >
             <p className="mb-4 font-bold">Tech Stack</p>
             <div className="flex gap-4 flex-wrap">
                 {
@@ -14,6 +22,6 @@ export const TechStack = () => {
                     )
                 }
             </div>
-        </div>
+        </motion.div>
     )
 }

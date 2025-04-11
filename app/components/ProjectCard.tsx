@@ -1,6 +1,9 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import { NorthEastIcon } from "./Icons";
+import { motion } from "motion/react";
+import { componentVarient } from "./Animations";
 
 export type TProject = {
     title: string,
@@ -12,7 +15,13 @@ export type TProject = {
 export const ProjectCard = (props: TProject) => {
     const { image, title, link, tags } = props;
     return (
-        <div className="rounded-2xl overflow-hidden bg-fiery-red shadow-2xl relative project-card">
+        <motion.div
+            variants={componentVarient}
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0.25 }}
+            className="rounded-2xl overflow-hidden bg-fiery-red shadow-2xl relative project-card"
+        >
             <Image src={image} width={540} height={540} alt="" className="aspect-square w-full object-cover project-image" />
             <div className="absolute bottom-0 left-0 p-6 bg-gradient-to-t from-black/60 to-transparent w-full">
                 <div className="flex justify-between mb-4">
@@ -29,6 +38,6 @@ export const ProjectCard = (props: TProject) => {
                     }
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }

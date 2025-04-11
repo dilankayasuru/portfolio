@@ -1,13 +1,20 @@
+"use client"
 import { SocialLinks } from "@/data/data";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "motion/react";
+import { componentVarient } from "./Animations";
 
 const CV_LINK = SocialLinks.cv;
 const SOCIALS = SocialLinks.links;
 
 export const Socials = () => {
     return (
-        <div className="rounded-2xl overflow-hidden bg-fiery-red shadow-2xl p-6 mb-6">
+        <motion.div className="rounded-2xl overflow-hidden bg-fiery-red shadow-2xl p-6 mb-6" variants={componentVarient}
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true }}
+        >
             <div className="flex gap-4 flex-wrap items-center">
                 {
                     SOCIALS.map((social, idx) =>
@@ -18,6 +25,6 @@ export const Socials = () => {
                 }
                 <Link href={CV_LINK} className="text-lg bg-peach-puff text-fiery-red px-4 py-2 rounded-full active:translate-y-0.5 active:shadow-md duration-300 shadow-xl" download>Download CV</Link>
             </div>
-        </div>
+        </motion.div>
     )
 }

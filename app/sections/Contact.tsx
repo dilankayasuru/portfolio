@@ -1,5 +1,7 @@
 "use client"
 import { FormEvent, useState } from "react";
+import { titleVarient } from "../components/Animations";
+import { motion } from "motion/react";
 
 export const Contact = () => {
 
@@ -55,7 +57,15 @@ export const Contact = () => {
 
     return (
         <div className="px-6 py-16" id="contact">
-            <p className="text-7xl font-extrabold outlined-text mb-16 md:text-9xl uppercase">Say Hi,</p>
+            <motion.p
+                variants={titleVarient}
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0.50 }}
+                className="text-7xl font-extrabold outlined-text mb-16 md:text-9xl uppercase"
+            >
+                Say Hi,
+            </motion.p>
             <form onSubmit={handleSubmit} className="w-full max-w-3xl mx-auto text-lg">
                 <InputField label="Name" id="Name" placeholder="Enter your name" type="text" required />
                 <InputField label="Email" id="Email" placeholder="Enter your email address" type="email"
