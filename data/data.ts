@@ -197,3 +197,9 @@ export const Projects = [
         ]
     },
 ];
+
+export const FooterLinks = {
+    github: "https://github.com/dilankayasuru",
+    linkedIn: "https://www.linkedin.com/in/dilanka-yasuru/",
+    instagram: "https://www.instagram.com/dilanka_yas_/",
+}
