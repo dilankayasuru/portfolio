@@ -7,8 +7,8 @@ export const SideNavigation = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <div className="fixed top-0 right-0 h-screen z-50">
-            <nav className={`rounded-bl-3xl shadow-xl overflow-hidden ${open ? 'translate-x-0' : 'translate-x-9/12 opacity-75'} transition-all duration-300 ease-in-out`}>
+        <div className={`fixed top-0 right-0 z-50 ${open ? 'translate-x-0' : 'translate-x-9/12 opacity-75'} transition-all duration-300 ease-in-out`}>
+            <nav className="rounded-bl-3xl shadow-xl overflow-hidden">
                 <div className="text-xl text-peach-puff bg-fiery-red flex pr-2">
                     <button className="px-2 grid place-content-center cursor-pointer outline-none" onClick={() => setOpen(!open)}>
                         <BackArrow className={`transition-all duration-300 ease-in-out ${open ? "scale-100 translate-x-2" : "-scale-100"}`} />
