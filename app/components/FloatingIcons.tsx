@@ -7,11 +7,11 @@ import { NodejsLogo } from "@/components/NodejsLogo";
 import { ReactLogo } from "@/components/ReactLogo";
 import { TailwindLogo } from "@/components/TailwindLogo";
 import { TypescriptLogo } from "@/components/TypescriptLogo";
-import { Environment, Float, Lightformer } from "@react-three/drei";
+import { Environment, Float, Lightformer, Preload } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { useEffect, useState } from 'react';
 
-export const FloatingIcons = () => {
+const FloatingIcons = () => {
     const [fov, setFov] = useState(17);
 
     useEffect(() => {
@@ -29,10 +29,6 @@ export const FloatingIcons = () => {
 
         return () => window.removeEventListener("resize", updateFov);
     }, []);
-
-    useEffect(() => {
-        console.log(fov)
-    }, [fov])
 
     return (
         <div className="absolute top-0 left-0 w-full h-screen -z-20">
@@ -86,9 +82,11 @@ export const FloatingIcons = () => {
                         <Lightformer intensity={2} rotation-y={-Math.PI / 2} position={[10, 1, 0]} scale={[50, 2, 1]} />
                     </group>
                 </Environment>
+                <Preload all />
             </Canvas>
         </div>
 
     );
 }
 
+export default FloatingIcons;

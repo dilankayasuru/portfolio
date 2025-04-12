@@ -1,8 +1,11 @@
 "use client"
+import dynamic from "next/dynamic";
+import Loading from "../loading";
 import { ActionFigure } from "../components/ActionFigure";
-import { FloatingIcons } from "../components/FloatingIcons";
 import { TimeZone } from "../components/TimeZone";
 import { motion } from "motion/react";
+
+const FloatingIcons = dynamic(() => import("../components/FloatingIcons"), { loading: () => <Loading /> });
 
 export const Hero = () => {
     return (
