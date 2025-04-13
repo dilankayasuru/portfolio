@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 import Link from "next/link";
-import { NorthEastIcon } from "./Icons";
+import { GitHubIcon, NorthEastIcon } from "./Icons";
 import { motion } from "motion/react";
 import { componentVarient } from "./Animations";
 
@@ -9,11 +9,12 @@ export type TProject = {
     title: string,
     image: string,
     link: string,
+    githubLink?: string,
     tags: string[];
 }
 
 export const ProjectCard = (props: TProject) => {
-    const { image, title, link, tags } = props;
+    const { image, title, link, githubLink, tags } = props;
     return (
         <motion.div
             variants={componentVarient}
@@ -34,9 +35,17 @@ export const ProjectCard = (props: TProject) => {
                 className="absolute left-0 top-0 p-6 w-full h-full flex flex-col justify-end">
                 <div className="flex justify-between items-start mb-4">
                     <p className="text-lg text-peach-puff font-semibold">{title}</p>
-                    <Link href={link} target="_blank" className="p-2 rounded-2xl bg-peach-puff active:translate-y-0.5 active:shadow-md duration-300 shadow-xl">
-                        <NorthEastIcon fill="none" className="fill-fiery-red" />
-                    </Link>
+                    <div className="flex justify-between items-center gap-2">
+                        {
+                            githubLink &&
+                            <Link href={githubLink} target="_blank" className="p-2 rounded-2xl bg-peach-puff active:translate-y-0.5 active:shadow-md duration-300 shadow-xl">
+                                <GitHubIcon fill="#000000" />
+                            </Link>
+                        }
+                        <Link href={link} target="_blank" className="p-2 rounded-2xl bg-peach-puff active:translate-y-0.5 active:shadow-md duration-300 shadow-xl">
+                            <NorthEastIcon fill="none" className="fill-fiery-red" />
+                        </Link>
+                    </div>
                 </div>
                 <div className="flex items-center gap-2 flex-wrap">
                     {

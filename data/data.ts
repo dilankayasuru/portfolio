@@ -139,6 +139,7 @@ export const Projects = [
         title: "Gemma 3:1b Chatbot",
         image: "/images/chatbot-mockup.webp",
         link: "https://gemma3-chatbot.vercel.app/",
+        githubLink: "https://github.com/dilankayasuru/gemma3-chatbot.git",
         tags: [
             "Next Js",
             "React",
@@ -172,6 +173,7 @@ export const Projects = [
         title: "BidGrab - Online auction platform",
         image: "/images/bidgrab-mockup.webp",
         link: "https://www.bidgrab.live/",
+        githubLink: "https://github.com/dilankayasuru/bidgrab-laravel.git",
         tags: [
             "Laravel",
             "MongoDB",
@@ -184,6 +186,7 @@ export const Projects = [
         title: "BidGrab Online Auction Platform - Flutter Mobile Application",
         image: "/images/bidgrab-mobile-mockup.webp",
         link: "https://github.com/dilankayasuru/BidGrab-mobile-app.git",
+        githubLink: "https://github.com/dilankayasuru/BidGrab-mobile-app.git",
         tags: [
             "Flutter",
             "Laravel",
@@ -194,6 +197,7 @@ export const Projects = [
         title: "Flix - Online Shoe Store",
         image: "/images/flix-mockup.webp",
         link: "https://flix-azure.vercel.app/",
+        githubLink: "https://github.com/dilankayasuru/Flix.git",
         tags: [
             "MongoDB",
             "Express",
