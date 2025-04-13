@@ -23,7 +23,7 @@ export const ProjectCard = (props: TProject) => {
             viewport={{ once: true, amount: 0.25 }}
             className="rounded-2xl overflow-hidden bg-fiery-red shadow-2xl relative project-card"
         >
-            <Image src={image} width={540} height={540} alt="" className="aspect-square w-full object-cover project-image" />
+            <Image src={image} width={540} height={540} alt={title} className="aspect-square w-full object-cover project-image" />
             <motion.div
                 initial={{
                     backgroundImage: "linear-gradient(to top, rgba(0,0,0,0.5) 20%, rgba(0,0,0,0))",
