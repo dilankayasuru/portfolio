@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import { SideNavigation } from "./components/SideNavigation";
+import { Logo } from "./components/Logo";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body
         className={`${outfit.variable} antialiased`}
       >
+        <Logo />
         <SideNavigation />
         {children}
       </body>
