@@ -1,9 +1,11 @@
 import { useGLTF } from '@react-three/drei';
 import { Material, Mesh } from 'three';
 
+useGLTF.preload('/assets/tailwind.glb');
+
 export function TailwindLogo() {
-    
-    const { nodes, materials } = useGLTF('/assets/tailwind.glb') as unknown as {
+
+    const { nodes, materials } = useGLTF('/assets/tailwind.glb', 'https://www.gstatic.com/draco/v1/decoders/') as unknown as {
         nodes: Record<string, Mesh>;
         materials: Record<string, Material>;
     };
@@ -31,5 +33,3 @@ export function TailwindLogo() {
         </group>
     )
 }
-
-useGLTF.preload('/assets/tailwind.glb');

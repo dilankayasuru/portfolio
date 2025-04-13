@@ -1,9 +1,11 @@
 import { useGLTF } from '@react-three/drei';
 import { Material, Mesh } from 'three';
 
+useGLTF.preload('/assets/react.glb');
+
 export function ReactLogo() {
 
-    const { nodes, materials } = useGLTF('/assets/react.glb') as unknown as {
+    const { nodes, materials } = useGLTF('/assets/react.glb', 'https://www.gstatic.com/draco/v1/decoders/') as unknown as {
         nodes: Record<string, Mesh>;
         materials: Record<string, Material>;
     };
@@ -27,5 +29,3 @@ export function ReactLogo() {
         </group>
     )
 }
-
-useGLTF.preload('/assets/react.glb');

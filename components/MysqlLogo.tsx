@@ -2,13 +2,15 @@
 import { useGLTF } from '@react-three/drei';
 import { Material, Mesh } from 'three';
 
+useGLTF.preload('/assets/mysql.glb');
+
 export function MysqlLogo() {
 
-    const { nodes, materials } = useGLTF('/assets/mysql.glb') as unknown as {
+    const { nodes, materials } = useGLTF('/assets/mysql.glb', 'https://www.gstatic.com/draco/v1/decoders/') as unknown as {
         nodes: Record<string, Mesh>;
         materials: Record<string, Material>;
     };
-    
+
     return (
         <group dispose={null}>
             <group scale={0.7}>
@@ -32,5 +34,3 @@ export function MysqlLogo() {
         </group>
     )
 }
-
-useGLTF.preload('/assets/mysql.glb');
