@@ -23,10 +23,18 @@ export const ProjectCard = (props: TProject) => {
             className="rounded-2xl overflow-hidden bg-fiery-red shadow-2xl relative project-card"
         >
             <Image src={image} width={540} height={540} alt="" className="aspect-square w-full object-cover project-image" />
-            <div className="absolute bottom-0 left-0 p-6 bg-gradient-to-t from-black/60 to-transparent w-full">
-                <div className="flex justify-between mb-4">
+            <motion.div
+                initial={{
+                    backgroundImage: "linear-gradient(to top, rgba(0,0,0,0.5) 20%, rgba(0,0,0,0))",
+                }}
+                whileHover={{
+                    backgroundImage: "linear-gradient(to top, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0))",
+                }}
+                transition={{ type: "easeInOut", duration: 0.7 }}
+                className="absolute left-0 top-0 p-6 w-full h-full flex flex-col justify-end">
+                <div className="flex justify-between items-start mb-4">
                     <p className="text-lg text-peach-puff font-semibold">{title}</p>
-                    <Link href={link} className="p-2 rounded-2xl bg-peach-puff active:translate-y-0.5 active:shadow-md duration-300 shadow-xl">
+                    <Link href={link} target="_blank" className="p-2 rounded-2xl bg-peach-puff active:translate-y-0.5 active:shadow-md duration-300 shadow-xl">
                         <NorthEastIcon fill="none" className="fill-fiery-red" />
                     </Link>
                 </div>
@@ -37,7 +45,7 @@ export const ProjectCard = (props: TProject) => {
                         )
                     }
                 </div>
-            </div>
+            </motion.div>
         </motion.div>
     )
 }

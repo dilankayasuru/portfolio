@@ -1,6 +1,6 @@
 export const SelfIntro = "Software engineering student specializing in full stack development with expertise in both frontend and backend technologies. Passionate about creating intuitive UI/UX designs that enhance user experience.";
 
-export const ProfilePhoto = "/images/photo.jpg";
+export const ProfilePhoto = "/images/photo.webp";
 
 export const EducationInfo = [
     {
@@ -136,64 +136,70 @@ export const GalleryImages = [
 
 export const Projects = [
     {
-        title: "Project 1",
-        image: "/images/mockup-1.png",
-        link: "#",
+        title: "Gemma 3:1b Chatbot",
+        image: "/images/chatbot-mockup.webp",
+        link: "https://gemma3-chatbot.vercel.app/",
         tags: [
-            "Python",
-            "Node",
+            "Next Js",
             "React",
-            "Ollama"
+            "Node",
+            "Stream",
+            "Ollama",
+            "Gemma3:1b",
         ]
     },
     {
-        title: "Project 1",
-        image: "/images/mockup-2.png",
-        link: "#",
+        title: "Studio Solasta website",
+        image: "/images/solasta-mockup.webp",
+        link: "https://solasta-nine.vercel.app/",
         tags: [
-            "Python",
-            "Node",
+            "Next Js",
             "React",
+            "Framer",
         ]
     },
     {
-        title: "Project 1",
-        image: "/images/mockup-3.png",
-        link: "#",
+        title: "KynoLabs website",
+        image: "/images/kynolabs-mockup.webp",
+        link: "https://www.kynolabs.com/",
         tags: [
-            "Python",
-            "Node",
+            "Next Js",
             "React",
+            "R3F",
         ]
     },
     {
-        title: "Project 1",
-        image: "/images/mockup-4.png",
-        link: "#",
+        title: "BidGrab - Online auction platform",
+        image: "/images/bidgrab-mockup.webp",
+        link: "https://www.bidgrab.live/",
         tags: [
-            "Python",
-            "Node",
-            "React",
+            "Laravel",
+            "MongoDB",
+            "Tailwind",
+            "Livewire",
+            "Jetstream"
         ]
     },
     {
-        title: "Project 1",
-        image: "/images/mockup-1.png",
-        link: "#",
+        title: "BidGrab Online Auction Platform - Flutter Mobile Application",
+        image: "/images/bidgrab-mobile-mockup.webp",
+        link: "https://github.com/dilankayasuru/BidGrab-mobile-app.git",
         tags: [
-            "Python",
-            "Node",
-            "React",
+            "Flutter",
+            "Laravel",
+            "MongoDB",
         ]
     },
     {
-        title: "Project 1",
-        image: "/images/mockup-2.png",
-        link: "#",
+        title: "Flix - Online Shoe Store",
+        image: "/images/flix-mockup.webp",
+        link: "https://flix-azure.vercel.app/",
         tags: [
-            "Python",
+            "MongoDB",
+            "Express",
             "Node",
             "React",
+            "JWT",
         ]
     },
 ];
